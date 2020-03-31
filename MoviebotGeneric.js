@@ -40,7 +40,7 @@ bot.on("message", async msg => {
               if(response.data.Response === "False")
                 msg.reply("Could not find a movie with that title, sorry 😥")
             else{
-              msg.channel.send(`**__${response.data.Title}__**\n Release Date:\t${response.data.Released}\n Director:\t\t\t${response.data.Director}\n IMDB Rating:\t${response.data.imdbRating}\n Box Office:\t\t${response.data.BoxOffice}\n`, {files: [response.data.Poster]})
+              msg.channel.send(`**__${response.data.Title}__**\n*${response.data.Plot}*\n Release Date:\t${response.data.Released}\n Director:\t\t\t${response.data.Director}\n IMDB Rating:\t${response.data.imdbRating}\n Box Office:\t\t${response.data.BoxOffice}\n`, {files: [response.data.Poster]})
             }
             })
             .catch((error)=>{
